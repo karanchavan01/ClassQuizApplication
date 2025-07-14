@@ -1,0 +1,40 @@
+.w-100 {
+  width: 100%;
+}
+
+.header-p {
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1a237e;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+.header-p:hover {
+  color: #004e92;
+}
+
+.form-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e0;
+}
+
+.submit-btn {
+  padding: 10px 30px;
+  font-weight: bold;
+  border-radius: 10px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 150, 136, 0.3);
+}
+
+.submit-btn:hover {
+  background-color: #00796b !important;
+  color: white;
+  transform: scale(1.05);
+}

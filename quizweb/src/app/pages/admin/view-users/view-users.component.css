@@ -1,0 +1,103 @@
+/* Main card styling */
+.color-card {
+  padding: 20px;
+  margin: 50px;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Expansion panel card styling */
+.user-panel {
+  border-radius: 10px;
+  margin: 50px;
+  border: 1px solid #ececec;
+  transition: all 0.3s ease-in-out;
+}
+
+.user-panel:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  background-color: #f8f8f8;
+}
+
+/* Header avatar image */
+.example-header-image {
+  background-image: url('https://image.flaticon.com/icons/png/512/327/327010.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+/* Title and username styling */
+.user-title h2 {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.username {
+  font-size: 15px;
+  font-weight: 400;
+  color: #888;
+  text-transform: none;
+  margin-left: 8px;
+}
+
+/* Action button area */
+.user-options {
+  padding: 15px 25px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.admin-options {
+  justify-content: center;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+/* Toggle text (Expand/Collapse) */
+.toggle-text {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Delete button */
+.user-actions {
+  margin-right: 20px;
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 768px) {
+  .user-title h2 {
+    font-size: 17px;
+  }
+
+  .username {
+    font-size: 13px;
+  }
+
+  .user-options {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .toggle-text {
+    font-size: 13px;
+  }
+
+  .example-header-image {
+    width: 32px;
+    height: 32px;
+  }
+}

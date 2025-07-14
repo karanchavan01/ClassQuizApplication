@@ -1,0 +1,80 @@
+<mat-card class="mt10 color-card" *ngIf="records.length != 0">
+  <div class="bootstrap-wrapper">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-1">
+          <div class="div" [routerLink]="'/admin/view-users'">
+            <img class="back" src="../../../../assets/back.png" alt="Back" />
+          </div>
+        </div>
+        <div class="col-md-11">
+          <mat-card-content>
+            <div class="container text-center">
+              <p class="mt10 user-history-heading">
+                <span>{{ user.firstName }} {{ user.lastName }}</span>'s Attempted Quizzes History
+              </p>
+            </div>
+          </mat-card-content>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-card>
+
+<mat-card class="mt10 mb10 color-card quiz-record" *ngFor="let r of records">
+  <div class="bootstrap-wrapper">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-md-4 p-3">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title><span>{{ r.quiz.title }}</span></mat-card-title>
+            <mat-card-subtitle><span>{{ r.date }}</span></mat-card-subtitle>
+          </mat-card-header>
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4 text-end">
+          <button mat-raised-button color="primary">Marks Obtained : {{ r.obtainedMarks }}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <mat-card-content>
+    <mat-divider></mat-divider>
+    <div class="bootstrap-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="quiz-details">
+              <li><b>Total Questions</b>: {{ r.quiz.noOfQuestions }}</li>
+              <li><b>Attempted</b>: {{ r.attemptedQuestions }}</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="quiz-details">
+              <li><b>Total Marks</b>: {{ r.quiz.maxMarks }}</li>
+              <li><b>Correct Answers</b>: {{ r.correctAttempted }}</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="quiz-details">
+              <li><b>Category</b>: {{ r.quiz.category.title }}</li>
+              <li><b>Marks Obtained</b>: {{ r.obtainedMarks }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<div class="col-md-12" *ngIf="records.length == 0" style="margin-top: 200px;">
+  <mat-card class="color-card text-center">
+    <mat-card-content>
+      <span class="no-record-msg">
+        {{ user.firstName }} {{ user.lastName }} hasn't attempted any quiz yet.
+      </span>
+    </mat-card-content>
+  </mat-card>
+</div>

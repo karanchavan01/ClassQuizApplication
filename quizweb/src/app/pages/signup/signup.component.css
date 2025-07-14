@@ -1,0 +1,78 @@
+/* Centered card layout */
+.signup-card {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ffffff, #f5f5f5);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+/* Optional Hover Effect */
+.signup-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Header Styling */
+.signup-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #3f51b5;
+  margin-bottom: 20px;
+  gap: 8px;
+  position: relative;
+}
+
+/* Back Icon */
+.back-btn {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #3f51b5;
+}
+
+/* Form field spacing */
+.signup-form mat-form-field {
+  margin-bottom: 16px;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(145deg, #004e92, #000428);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  transform: scale(1.03);
+  background: linear-gradient(145deg, #0066ff, #001133);
+}
+
+/* Full-width inputs */
+.full-width {
+  width: 100%;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}

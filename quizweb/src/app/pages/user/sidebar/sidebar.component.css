@@ -1,0 +1,46 @@
+.user-sidebar {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(145deg, #004e92, #000428);
+  color: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.sidebar-btn {
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: left;
+  transition: all 0.2s ease-in-out;
+  border-radius: 8px;
+}
+
+.sidebar-btn:hover {
+  background-color: linear-gradient(145deg, #004e92, #000428);
+  transform: translateX(4px);
+}
+
+.select-field {
+  width: 100%;
+  margin-top: 10px;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+mat-label {
+  padding-left: 10px;
+  font-weight: 600;
+  color: #000428;
+}
+
+.divider {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+mat-icon {
+  color: aliceblue;
+}

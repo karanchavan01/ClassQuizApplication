@@ -1,0 +1,63 @@
+<mat-card *ngIf="user" class="mt10 mb20 user-profile-card">
+
+  <!-- Back Button -->
+  <div class="d-flex align-items-center back-link" [routerLink]="'/admin/view-users'">
+    <img class="back-icon" src="../../../../assets/back.png" alt="">
+    <span class="ml10">Back</span>
+  </div>
+
+  <!-- Profile Header -->
+  <div class="container text-center mt10">
+    <h2 class="profile-title">👤 Your Profile Details</h2>
+  </div>
+
+  <!-- Card Content -->
+  <mat-card-content>
+    <div class="bootstrap-wrapper">
+      <div class="container text-center mt20">
+        <img src="../../../assets/loginLogo1.png" alt="Profile" class="profile-image" />
+        <h3 class="mt15 user-name">
+          <span style="text-transform: capitalize;">{{ user.firstName }} {{ user.lastName }}</span>
+        </h3>
+      </div>
+
+      <div class="row mt30">
+        <div class="col-md-10 offset-md-1">
+          <table class="table profile-table text-center">
+            <tr>
+              <td>👤 Username</td>
+              <td>{{ user.username }}</td>
+            </tr>
+            <tr>
+              <td>🆔 User ID</td>
+              <td>CQ_{{ user.id }}</td>
+            </tr>
+            <tr>
+              <td>📞 Phone No.</td>
+              <td>{{ user.phone }}</td>
+            </tr>
+            <tr>
+              <td>🛡️ Role</td>
+              <td>{{ user.authorities[0].authority }}</td>
+            </tr>
+            <tr>
+              <td>✅ Status</td>
+              <td>
+                <span [ngClass]="{'status-active': user.enabled, 'status-deactive': !user.enabled}">
+                  {{ user.enabled ? 'ACTIVE' : 'DEACTIVE' }}
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+
+  <!-- Action Buttons -->
+  <mat-card-actions class="text-center mt20 mb20">
+    <button mat-raised-button color="primary" class="action-btn">📊 User Activities</button>
+    <button mat-raised-button color="accent" class="ml10 action-btn">📚 View Quizzes</button>
+  </mat-card-actions>
+
+</mat-card>

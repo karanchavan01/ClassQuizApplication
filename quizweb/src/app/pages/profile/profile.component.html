@@ -1,0 +1,52 @@
+<mat-card *ngIf="user" class="mt10 mb20 profile-card">
+  <div class="profile-header text-center">
+    <h1 class="profile-title">👤 Your Profile Details</h1>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <mat-card-content>
+    <div class="profile-container text-center">
+      <img 
+        src="../../../assets/loginLogo1.png" 
+        alt="Profile" 
+        class="profile-image">
+
+      <h2 class="mt20">
+        {{ user.firstName }} {{ user.lastName }}
+        <span class="role-tag">({{ user.authorities[0].authority }})</span>
+      </h2>
+    </div>
+
+    <div class="row mt20">
+      <div class="col-md-10 offset-md-1">
+        <table class="table text-center profile-table">
+          <tr>
+            <td>👤 Username</td>
+            <td>{{ user.username }}</td>
+          </tr>
+          <tr>
+            <td>🆔 User Email</td>
+            <td>{{ user.email }}</td>
+          </tr>
+          <tr>
+            <td>📞 Phone No.</td>
+            <td>{{ user.phone }}</td>
+          </tr>
+          <tr>
+            <td>🔐 Role</td>
+            <td>{{ user.authorities[0].authority }}</td>
+          </tr>
+          <tr>
+            <td>✅ Status</td>
+            <td>
+              <span [ngClass]="user.enabled ? 'active-status' : 'inactive-status'">
+                {{ user.enabled ? "ACTIVE" : "DEACTIVE" }}
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

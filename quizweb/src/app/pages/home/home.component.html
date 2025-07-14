@@ -1,0 +1,86 @@
+<mat-sidenav-container class="home-container">
+  <mat-sidenav #sidenav="matSidenav" class="side-nav mat-elevation-z8">
+  <div class="sidebar-header">
+    <img src="../../../assets/quiz-logo.png" class="logo" alt="ClassQuiz Logo" />
+    <h2>📘 ClassQuiz</h2>
+    <p>Your Learning Companion</p>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <nav class="menu">
+    <button mat-button routerLink="/" class="menu-btn">
+      <mat-icon>home</mat-icon> Home
+    </button>
+    <button *ngIf="!isLoggedIn" mat-button routerLink="/login" class="menu-btn">
+      <mat-icon>login</mat-icon> Login
+    </button>
+    <button *ngIf="!isLoggedIn" mat-button routerLink="/signup" class="menu-btn">
+      <mat-icon>person_add</mat-icon> Register
+    </button>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button routerLink="/admin" class="menu-btn">
+      <mat-icon>admin_panel_settings</mat-icon> Admin
+    </button>
+  </nav>
+</mat-sidenav>
+
+
+  <mat-sidenav-content>
+    <div class="main-banner">
+    <div class="headline">
+    <h1>📚 Welcome to <span>ClassQuiz</span></h1>
+    <p>🧠 Practice. 🎯 Test. 🏆 Succeed.</p>
+    <div class="cta-buttons">
+      <button mat-raised-button color="primary" routerLink="/login">🚀 Get Started</button>
+    </div>
+  </div>
+</div>
+<section class="features-section">
+      <h2>✨ Why Choose ClassQuiz?</h2>
+      <div class="features">
+        <div class="feature-card">
+          <mat-icon>lightbulb</mat-icon>
+          <h3>Interactive Quizzes</h3>
+          <p>📝 Improve retention through engaging quiz formats.</p>
+        </div>
+        <div class="feature-card">
+          <mat-icon>timer</mat-icon>
+          <h3>Timed Assessments</h3>
+          <p>⏳ Challenge yourself with real-time practice sessions.</p>
+        </div>
+        <div class="feature-card">
+          <mat-icon>leaderboard</mat-icon>
+          <h3>Instant Results & Analytics</h3>
+          <p>📊 Get insights & performance analysis immediately.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Floating Chatbot -->
+    <button class="chat-fab" mat-fab color="primary" (click)="toggleChat()">
+      <mat-icon>chat</mat-icon>
+    </button>
+
+    <div class="chat-window" *ngIf="showChat">
+      <div class="chat-header">
+        <span>🤖 ClassQuiz Bot</span>
+        <button mat-icon-button (click)="toggleChat()">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+      <div class="chat-body">
+        <div *ngFor="let msg of messages">
+          <p><strong>{{ msg.sender }}:</strong> {{ msg.text }}</p>
+        </div>
+      </div>
+      <input
+        [(ngModel)]="userMessage"
+        (keyup.enter)="sendMessage()"
+        placeholder="Type a message..."
+      />
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

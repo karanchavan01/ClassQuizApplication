@@ -1,0 +1,82 @@
+.profile-card {
+  padding: 20px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+
+.profile-header {
+  margin-bottom: 15px;
+}
+
+.profile-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.role-tag {
+  font-size: 16px;
+  font-weight: 400;
+  color: #888;
+}
+
+.profile-table {
+  width: 100%;
+  margin-top: 25px;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.profile-table tr td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  color: #444;
+  vertical-align: middle;
+}
+
+.profile-table tr td:first-child {
+  font-weight: 600;
+  color: #555;
+  width: 40%;
+}
+
+.active-status {
+  color: green;
+  font-weight: bold;
+}
+
+.inactive-status {
+  color: red;
+  font-weight: bold;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.mr10 {
+  margin-right: 10px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}

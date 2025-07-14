@@ -1,0 +1,236 @@
+/* 📦 Container */
+.home-container {
+  height: calc(100vh - 64px);
+}
+
+/* 📚 Sidebar */
+.side-nav {
+  width: 300px;
+  background: linear-gradient(145deg, #004e92, #000428);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.sidebar-header .logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  object-fit: cover;
+  margin-bottom: 12px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.sidebar-header p {
+  font-size: 0.85rem;
+  color: #dcdcdc;
+  margin: 4px 0 0;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.menu-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  color: #ffffff;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.menu-btn mat-icon {
+  font-size: 22px;
+  color: #ffeb3b;
+}
+
+.menu-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.03);
+  color: #ffd740;
+}
+
+mat-divider {
+  width: 90%;
+  margin: 16px auto;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 🌄 Main Banner with Background */
+.main-banner {
+  height: 100%;
+  min-height: 200px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../../../assets/quiz3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  position: relative;
+  color: white;
+  text-align: center;
+  flex-direction: column;      /* 👈 ensure vertical stack */
+}
+
+.main-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* shorthand for top: 0; right: 0; bottom: 0; left: 0 */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4));
+  z-index: 1;
+  border-radius: inherit; /* inherits from .main-banner */
+  pointer-events: none; /* allows clicking through overlay */
+}
+
+.headline {
+  z-index: 2;
+  max-width: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.headline h1 {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.headline h1 span {
+  color: #ffd740;
+}
+
+.headline p {
+  font-size: 1.2rem;
+  margin-bottom: 24px;
+}
+
+.cta-buttons button {
+  margin: 0 8px;
+}
+
+/* 💬 Chatbot Floating Button */
+.chat-fab {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+}
+
+/* 💬 Chatbot Window */
+.chat-window {
+  position: fixed;
+  bottom: 90px;
+  right: 25px;
+  width: 320px;
+  height: 400px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.chat-header {
+  background: #3f51b5;
+  color: white;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.chat-window input {
+  padding: 12px;
+  border: none;
+  border-top: 1px solid #ccc;
+  outline: none;
+}
+
+.features-section {
+  margin: 40px 30px;
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #1a237e;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.feature-card {
+  background: #f0f4ff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.feature-card mat-icon {
+  font-size: 40px;
+  color: #3f51b5;
+  margin-bottom: 10px;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.cta-buttons{
+  margin-top: 250px;
+}

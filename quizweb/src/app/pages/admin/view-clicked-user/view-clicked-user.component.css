@@ -1,0 +1,89 @@
+.user-profile-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e0;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.user-profile-card:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.back-link {
+  cursor: pointer;
+  margin-left: 15px;
+  margin-top: 5px;
+  font-size: 16px;
+  color: #3949ab;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #1e88e5;
+  font-style: italic;
+}
+
+.back-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.profile-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #2c387e;
+}
+
+.profile-image {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.user-name {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+}
+
+.profile-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  background-color: #fafafa;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.profile-table tr td {
+  padding: 14px;
+  font-size: 16px;
+  border: 1px solid #e0e0e0;
+  color: #444;
+}
+
+.status-active {
+  color: green;
+  font-weight: bold;
+}
+
+.status-deactive {
+  color: red;
+  font-weight: bold;
+}
+
+.action-btn {
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 25px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  transform: scale(1.05);
+}

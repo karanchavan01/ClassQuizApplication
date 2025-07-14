@@ -1,0 +1,89 @@
+/* Avatar Icon */
+.quiz-avatar {
+  background-image: url('https://image.flaticon.com/icons/png/512/327/327010.png');
+  background-size: cover;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+/* Truncate Description */
+.truncate {
+  display: block;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Quiz Card Styling */
+.quiz-card {
+  border-radius: 12px;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  background: #ffffff;
+  border: 1px solid #000428;
+}
+
+.quiz-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  background: #e6f3fc;
+}
+
+/* Title and Subtitle */
+.quiz-title {
+  font-weight: 600;
+  font-size: 18px;
+  color: #106aaa;
+}
+
+.quiz-category {
+  font-size: 14px;
+  color: #757575;
+  font-weight: 500;
+}
+
+/* Description */
+.quiz-desc {
+  font-size: 14px;
+  color: #333;
+  margin-top: 6px;
+}
+
+/* Actions Button Group */
+.action-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-spacing {
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* Empty Message Card */
+.empty-card {
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .quiz-title {
+    font-size: 16px;
+  }
+
+  .quiz-card {
+    margin: 10px 0;
+  }
+
+  .btn-spacing {
+    width: 100%;
+  }
+}

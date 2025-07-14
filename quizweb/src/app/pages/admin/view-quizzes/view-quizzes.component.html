@@ -1,0 +1,82 @@
+<mat-card class="quiz-summary-card shadow-lg p-4 mb-4">
+  <div class="row align-items-center">
+    <div class="col-md-9">
+      <h2 class="quiz-header-title">📊 Total Available Quizzes</h2>
+    </div>
+    <div class="col-md-3 text-end">
+      <h1 class="quiz-count">{{ quizzes.length }}</h1>
+    </div>
+  </div>
+</mat-card>
+
+<mat-accordion>
+  <mat-expansion-panel 
+    *ngFor="let q of quizzes" 
+    class="quiz-panel shadow-sm mb-3"
+    (opened)="panelOpenState = true" 
+    (closed)="panelOpenState = false">
+
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <div class="d-flex align-items-center">
+          <div class="quiz-avatar me-3"></div>
+          <div>
+            <h5 class="mb-1">{{ q.title }}</h5>
+            <small class="text-muted">📁 {{ q.category.title }}</small>
+          </div>
+        </div>
+      </mat-panel-title>
+
+      <mat-panel-description>
+        <span class="text-muted fw-medium">
+          {{ q.active ? '🟢 Active' : '🔴 Inactive' }} &nbsp;&nbsp; |
+          &nbsp;&nbsp; {{ panelOpenState ? 'Collapse ▲' : 'Expand ▼' }}
+        </span>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <div class="px-3">
+      <p class="quiz-description text-muted">{{ q.description }}</p>
+      <hr />
+      <div class="d-flex flex-wrap gap-2 mb-3">
+        <button 
+          [routerLink]="'/admin/view-questions/' + q.qId + '/' + q.title"
+          mat-flat-button color="primary">
+          📝 View Questions
+        </button>
+
+        <button mat-stroked-button color="accent">
+          🎯 Max Marks: {{ q.maxMarks }}
+        </button>
+
+        <button mat-stroked-button color="accent">
+          ❓ Questions: {{ q.noOfQuestions }}
+        </button>
+
+        <button 
+          [routerLink]="'/admin/update-quiz/' + q.qId"
+          mat-flat-button color="accent">
+          ✏️ Modify Quiz
+        </button>
+
+        <button 
+          [routerLink]="'/admin/view-record/' + q.qId"
+          mat-flat-button color="accent">
+          📊 Attempt Records
+        </button>
+
+        <button 
+          (click)="deleteQuiz(q.qId)"
+          mat-flat-button color="warn">
+          🗑️ Remove
+        </button>
+      </div>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<div class="text-center mt-4 mb-5">
+  <button routerLink="/admin/add-quiz" mat-raised-button color="primary">
+    ➕ Add New Quiz
+  </button>
+</div>

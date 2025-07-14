@@ -1,0 +1,47 @@
+<div class="change-password-wrapper">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <mat-card class="change-password-card">
+          <div class="text-center mb-4">
+            <h2 class="title-text">🔐 Change Password</h2>
+          </div>
+
+          <mat-card-content>
+            <form>
+
+              <!-- Current Password -->
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Current Password</mat-label>
+                <input matInput type="password" required placeholder="Enter current password">
+                <mat-icon matSuffix>lock</mat-icon>
+                <mat-hint>Password must match your current password.</mat-hint>
+              </mat-form-field>
+
+              <!-- New Password -->
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>New Password</mat-label>
+                <input matInput type="password" required placeholder="Enter new password">
+                <mat-icon matSuffix>vpn_key</mat-icon>
+                <mat-hint>Password should be strong.</mat-hint>
+              </mat-form-field>
+
+              <!-- Confirm New Password -->
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Confirm New Password</mat-label>
+                <input matInput type="password" required placeholder="Re-enter new password">
+                <mat-icon matSuffix>check_circle</mat-icon>
+                <mat-hint>Should match the new password.</mat-hint>
+              </mat-form-field>
+
+              <div class="text-center mt-4">
+                <button mat-raised-button color="primary">Update Password</button>
+              </div>
+
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

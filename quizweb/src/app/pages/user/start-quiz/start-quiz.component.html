@@ -1,0 +1,112 @@
+<mat-card class="color-card mt10 mb10 mx-3" *ngIf="!isSubmit">
+  <div class="bootstrap-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+
+        <!-- 📌 Left Instructions -->
+        <div class="col-md-2">
+          <h2 class="section-heading">📖 Instructions</h2>
+          <mat-card class="instructions-card modern-shadow">
+            <ul class="instruction-list">
+              <li>🚫 Do not refresh the page.</li>
+              <li>🛑 Do not switch tabs or minimize the window.</li>
+              <li>📵 Stay focused — cheating disables auto-save.</li>
+            </ul>
+          </mat-card>
+        </div>
+
+        <!-- 📋 Middle Quiz Content -->
+        <div class="col-md-7" *ngIf="questions?.length > 0">
+          <h1 class="text-center quiz-heading">🎯 Quiz: <b>{{ questions[0].quiz.title }}</b></h1>
+
+          <mat-card class="mt10 mb20 modern-shadow">
+            <mat-card-content class="question-card">
+              <p class="question-text">
+                <b>Q{{ currentQuestionIndex + 1 }}:</b>
+                <span class="ml10" [innerHTML]="questions[currentQuestionIndex].content"></span>
+              </p>
+              <mat-divider></mat-divider>
+
+              <!-- 📝 Options -->
+              <div class="row mt20">
+                <ng-container *ngFor="let opt of ['option1', 'option2', 'option3', 'option4']; let j = index;">
+                  <div class="col-md-6 mt10">
+                    <label class="option-wrapper">
+                      <input 
+                        type="radio"
+                        [name]="'grp'+currentQuestionIndex"
+                        [(ngModel)]="questions[currentQuestionIndex].givenAnswer"
+                        [value]="questions[currentQuestionIndex][opt]" />
+                      <span><b>{{ ['A', 'B', 'C', 'D'][j] }}.</b> {{ questions[currentQuestionIndex][opt] }}</span>
+                    </label>
+                  </div>
+                </ng-container>
+              </div>
+            </mat-card-content>
+          </mat-card>
+
+          <!-- 🔘 Navigation Buttons -->
+          <div class="text-center mb20">
+            <button mat-raised-button color="primary" (click)="prevQuestion()" [disabled]="currentQuestionIndex === 0">
+              ⬅️ Previous
+            </button>
+
+            <button mat-raised-button color="primary" (click)="nextQuestion()" [disabled]="currentQuestionIndex === questions.length - 1">
+              Next ➡️
+            </button>
+
+            <button *ngIf="currentQuestionIndex === questions.length - 1" mat-raised-button color="accent" (click)="submitQuiz()">
+              ✅ Submit Quiz
+            </button>
+          </div>
+        </div>
+
+        <!-- ⏳ Timer Section -->
+        <div class="col-md-3">
+          <h2 class="section-heading text-center text-primary">⏳ Timer</h2>
+          <mat-card class="timer-card best-timer-card text-center">
+            <mat-card-header>
+              <mat-card-title class="text-primary fw-bold">⏰ Time Left</mat-card-title>
+              <mat-card-subtitle><small>System will auto-submit once time ends.</small></mat-card-subtitle>
+            </mat-card-header>
+
+            <mat-card-content>
+              <div class="circular-timer-wrapper">
+                <svg class="circle-svg" viewBox="0 0 36 36">
+                  <path class="circle-bg" d="M18 2.0845a 15.9155 15.9155 0 0 1 0 31.831a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  <path class="circle" [attr.stroke-dasharray]="getPercentage() + ', 100'" d="M18 2.0845a 15.9155 15.9155 0 0 1 0 31.831a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  <text x="18" y="20.35" class="circle-text">{{ getFormattedTime() }}</text>
+                </svg>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</mat-card>
+
+<!-- ✅ Quiz Result Section -->
+<div *ngIf="isSubmit" class="bootstrap-wrapper">
+  <div class="container text-center">
+    <div class="row mt20">
+      <div class="col-md-6 offset-md-3">
+        <mat-card class="result-card modern-shadow">
+          <mat-card-header>
+            <mat-card-title class="text-success">📊 Quiz Result</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <h3>🏆 Marks Obtained: {{ marksGot }}</h3>
+            <h3>✅ Correct Answers: {{ correctAnswers }}</h3>
+            <h3>📝 Attempted Questions: {{ attempted }}</h3>
+          </mat-card-content>
+          <mat-card-actions class="text-center">
+            <button mat-raised-button color="primary" (click)="printResult()">🖨️ Print</button>
+            <button mat-raised-button color="accent" [routerLink]="'/user-dashboard/0'">🏠 Home</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

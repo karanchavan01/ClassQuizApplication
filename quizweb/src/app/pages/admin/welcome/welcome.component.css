@@ -1,0 +1,71 @@
+/* ✅ Profile Card */
+.bg-gradient-primary {
+  background: linear-gradient(145deg, #004e92, #000428);
+  color: white; /* optional: ensures text is visible */
+}
+
+.profile-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 👤 Profile Image */
+.profile-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* 🔷 Dashboard Quick Cards */
+.dashboard-card {
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+  padding: 30px 20px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  height: 100%;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* 🖼 Card Icons */
+.card-icon {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* 📝 Card Titles */
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #004d40;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* 🧾 Card Text */
+.card-text {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* 🔹 Divider Style */
+hr {
+  border-top: 1px solid #ddd;
+  margin: 0.5rem 0;
+}

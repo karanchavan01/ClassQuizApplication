@@ -1,0 +1,54 @@
+.quiz-instruction-card {
+  background: #fefefe;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.instruction-content {
+  font-size: 15px;
+  color: #333;
+}
+
+.quiz-title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #003b73;
+}
+
+.quiz-desc {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.section-heading {
+  font-size: 20px;
+  font-weight: bold;
+  color: #004e92;
+  margin-top: 20px;
+}
+
+ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.start-btn {
+  padding: 10px 25px;
+  font-size: 16px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.start-btn:hover {
+  background-color: #004e92 !important;
+  color: white;
+  transform: scale(1.05);
+}

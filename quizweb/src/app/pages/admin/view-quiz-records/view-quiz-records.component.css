@@ -1,0 +1,64 @@
+/* Avatar Image */
+.avatar-img {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/327/327010.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Main Title */
+.quiz-history-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  color: #004e92;
+}
+
+/* Attempt Badge */
+.attempt-badge {
+  background: linear-gradient(135deg, #ff5f6d, #ffc371);
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+/* Attempt Card Hover Effect */
+.attempt-card {
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.attempt-card:hover {
+  background-color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Back Icon */
+.back-icon {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.back-wrapper:hover .back-icon {
+  transform: scale(1.2);
+}
+
+/* Capitalize Names */
+.capitalize {
+  text-transform: capitalize;
+}
+
+/* No Records */
+.no-records-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #888;
+  font-family: 'Segoe UI', sans-serif;
+}

@@ -1,0 +1,50 @@
+<mat-card class="history-header-card shadow-lg mb-4">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Back Button -->
+      <div class="col-md-2 text-start">
+        <div class="back-wrapper" [routerLink]="'/admin/quizzes'">
+          <img src="../../../../assets/back.png" class="back-icon" alt="Go Back">
+        </div>
+      </div>
+
+      <!-- Quiz Title -->
+      <div class="col-md-8 text-center">
+        <p class="quiz-history-title">📘 <b>{{ quizTitle }}</b> History</p>
+      </div>
+
+      <!-- Attempt Count -->
+      <div class="col-md-2 text-end">
+        <div class="attempt-badge">
+          🧑‍💻 {{ records.length }} Attempts
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-card>
+
+<!-- Attempts List -->
+<mat-card class="mb-3 attempt-card" *ngFor="let r of records">
+  <mat-card-header>
+    <div mat-card-avatar class="avatar-img"></div>
+    <mat-card-title class="capitalize">{{ r.userdata.firstName }} {{ r.userdata.lastName }}</mat-card-title>
+    <mat-card-subtitle class="text-muted">{{ r.userdata.email }} • {{ r.date }}</mat-card-subtitle>
+  </mat-card-header>
+  
+<button mat-stroked-button color="warn" (click)="deleteRecord(r.id)">
+  🗑️ Delete
+</button>
+
+</mat-card>
+
+
+<!-- No Attempts Message -->
+<div class="col-md-12" *ngIf="records.length === 0" style="margin-top: 200px;">
+  <mat-card>
+    <mat-card-content>
+      <div class="text-center">
+        <span class="no-records-text">⚠️ No one has attempted this quiz yet.</span>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

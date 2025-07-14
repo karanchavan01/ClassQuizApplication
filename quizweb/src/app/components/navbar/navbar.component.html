@@ -1,0 +1,47 @@
+<mat-toolbar class="my-toolbar">
+  <!-- 🔹 Logo & Title -->
+  <div class="left-section">
+    <a routerLink="/" class="logo-link" aria-label="Home">
+      <mat-icon>menu_book</mat-icon>
+      <span class="title">Classroom Quiz</span>
+    </a>
+  </div>
+
+  <!-- 🔹 Spacer -->
+  <span class="spacer"></span>
+
+  <!-- 🔹 User Action Buttons -->
+  <div class="right-section">
+    <!-- Not Logged In -->
+    <a *ngIf="!isLoggedIn" routerLink="/login" class="toolbar-btn" mat-button>
+      <mat-icon>login</mat-icon>
+      <span style="color: aliceblue;">Login</span>
+    </a>
+    <a *ngIf="!isLoggedIn" routerLink="/signup" class="toolbar-btn" mat-button>
+      <mat-icon>person_add</mat-icon>
+      <span style="color: aliceblue;">Register</span>
+    </a>
+
+    <!-- Logged In -->
+    <a
+      *ngIf="isLoggedIn"
+      (click)="logout()"
+      class="toolbar-btn"
+      mat-button
+    >
+      <mat-icon>logout</mat-icon>
+      <span style="color: aliceblue;">Logout</span>
+    </a>
+
+    <button
+      *ngIf="isLoggedIn && user"
+      mat-raised-button
+      color="accent"
+      routerLink="/admin/profile"
+      class="user-btn"
+    >
+      <mat-icon>account_circle</mat-icon>
+      {{ login.getUser().username }}
+    </button>
+  </div>
+</mat-toolbar>

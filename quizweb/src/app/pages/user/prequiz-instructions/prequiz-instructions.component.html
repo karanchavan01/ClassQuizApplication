@@ -1,0 +1,57 @@
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        <mat-card class="quiz-instruction-card mt10 mb20">
+          <mat-card-header>
+            <mat-card-title>
+              📘 Read the instructions of this quiz carefully.
+            </mat-card-title>
+            <mat-card-subtitle>
+              ⬇️ Scroll down for <b>Start Quiz</b> button.
+            </mat-card-subtitle>
+          </mat-card-header>
+
+          <mat-card-content class="ml20 instruction-content">
+            <h1 class="quiz-title">📖 {{ quiz.title }}</h1>
+            <p class="quiz-desc">{{ quiz.description }}</p>
+            <mat-divider></mat-divider>
+
+            <h2 class="section-heading">📌 Important Instructions</h2>
+            <ul>
+              <li>🧠 The quiz <b>{{ quiz.title }}</b> is only for practice.</li>
+              <li>⏳ Time: <b>{{ quiz.noOfQuestions * 2 }} minutes</b>.</li>
+              <li>❓ Total Questions: <b>{{ quiz.noOfQuestions }}</b>.</li>
+              <li>🏆 Max Marks: <b>{{ quiz.maxMarks }}</b>. Each carries <b>{{ quiz.maxMarks / quiz.noOfQuestions }} marks</b>.</li>
+              <li>❌ No negative marking. Unlimited attempts allowed.</li>
+              <li>✅ All questions are multiple choice (MCQ).</li>
+            </ul>
+
+            <mat-divider></mat-divider>
+
+            <h2 class="section-heading">📝 Attempting Quiz Instructions</h2>
+            <ul>
+              <li>▶️ Click <b>Start Quiz</b> to begin and <b>Submit Quiz</b> after completion.</li>
+              <li>⏱️ Timer starts when you click Start Quiz.</li>
+              <li>🚫 You cannot resume once interrupted.</li>
+              <li>🖱️ Scroll down to move between questions.</li>
+              <li>📄 Result will be generated as a downloadable PDF.</li>
+            </ul>
+          </mat-card-content>
+
+          <mat-card-actions class="text-center">
+            <button 
+              (click)="startQuiz()" 
+              class="mb20 mt20 start-btn"
+              mat-raised-button 
+              color="primary">
+              🚀 Start Quiz
+            </button>
+          </mat-card-actions>
+        </mat-card>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<mat-card class="my-sidebar mat-elevation-z6">
+  <mat-action-list>
+
+    <div mat-subheader class="sidebar-title">
+      📋<h4>Dashboard</h4>
+    </div>
+
+    <button class="sidebar-btn" mat-list-item routerLink="/admin">
+      <h6 style="color: aliceblue;">🏠 Home</h6>
+    </button>
+
+    <button class="sidebar-btn" mat-list-item routerLink="/admin/profile">
+      <h6 style="color: aliceblue;">👤 Profile</h6>
+    </button>
+
+    <button class="sidebar-btn" mat-list-item routerLink="/admin/categories">
+      <h6 style="color: aliceblue;">📚 Categories</h6>
+    </button>
+
+    <button class="sidebar-btn" mat-list-item routerLink="/admin/add-category">
+      <h6 style="color: aliceblue;">➕ Add Category</h6>
+    </button>
+
+    <button class="sidebar-btn" mat-list-item routerLink="/admin/quizzes">
+      <h6 style="color: aliceblue;">❓ Quizzes</h6>
+    </button>
+
+    <button class="sidebar-btn" mat-list-item routerLink="/admin/add-quiz">
+      <h6 style="color: aliceblue;">➕ Add Quiz</h6>
+    </button>
+
+    <button class="sidebar-btn" mat-list-item (click)="logout()" *ngIf="isLoggedIn">
+      <mat-icon mat-list-icon>logout</mat-icon><span style="color: aliceblue;">LOGOUT</span>
+    </button>
+
+  </mat-action-list>
+</mat-card>

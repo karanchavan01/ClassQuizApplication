@@ -1,0 +1,50 @@
+<mat-card class="user-sidebar mt10">
+  <div class="bootstrap-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+          <mat-action-list>
+
+            <button class="sidebar-btn" mat-list-item routerLink="/user-dashboard/user-home">
+              <h6 style="color: aliceblue;">🏠 Home</h6>
+            </button>
+
+            <button class="sidebar-btn" mat-list-item routerLink="/user-dashboard/user-profile">
+              <h6 style="color: aliceblue;">👤 Profile</h6>
+            </button>
+
+            <button class="sidebar-btn" mat-list-item routerLink="/user-dashboard/0">
+              <h6 style="color: aliceblue;">❓ Quizzes</h6>
+            </button>
+
+            <mat-divider class="divider"></mat-divider>
+
+            <div mat-subheader><h5>🔍 Search Quizzes</h5></div>
+
+            <mat-form-field class="select-field" appearance="fill">
+              <mat-label>📚 Choose Category</mat-label>
+              <mat-select name="category">
+                <mat-option [routerLink]="'/user-dashboard/' + c.cid" *ngFor="let c of categories" [value]="c.cid">
+                  {{ c.title }} <mat-divider class="divider"></mat-divider>
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-divider class="divider"></mat-divider>
+
+            <button class="sidebar-btn mt10" mat-list-item routerLink="/user-dashboard/settings">
+              <h6 style="color: aliceblue;">⚙️ Settings</h6>
+            </button>
+
+            <button class="sidebar-btn" mat-list-item (click)="logout()" *ngIf="isLoggedIn">
+              <mat-icon mat-list-icon>logout</mat-icon><span style="color: aliceblue;">LOGOUT</span>
+            </button>
+
+          </mat-action-list>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-card>

@@ -1,0 +1,75 @@
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <div class="row mt20 mb20">
+      <div class="col-md-6 offset-md-3">
+        <mat-card *ngIf="!flag" class="signup-card">
+
+          <!-- 🔙 Back Button + Title -->
+          <div class="signup-header">
+            <a routerLink="/" mat-icon-button class="back-btn" aria-label="Back">
+              <mat-icon>arrow_back_ios</mat-icon>
+            </a>
+            <span>📝 Register</span>
+          </div>
+
+          <!-- 🌐 Signup Form -->
+          <form (ngSubmit)="formSubmit()" class="signup-form">
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>👤 Username</mat-label>
+              <input [(ngModel)]="user.username" name="username" matInput placeholder="Enter your username" required />
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>🔒 Password</mat-label>
+              <input [(ngModel)]="user.password" name="password" type="password" matInput placeholder="Enter your password" required />
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>🧑 First Name</mat-label>
+              <input [(ngModel)]="user.firstName" name="firstName" matInput placeholder="Enter your first name" required />
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>👨 Last Name</mat-label>
+              <input [(ngModel)]="user.lastName" name="lastName" matInput placeholder="Enter your last name" required />
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>📧 Email</mat-label>
+              <input [(ngModel)]="user.email" name="email" type="email" matInput placeholder="Enter your email" required />
+              <mat-hint>We'll never share your email.</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>📞 Phone Number</mat-label>
+              <input [(ngModel)]="user.phone" name="phone" type="number" matInput placeholder="Enter your phone number" required />
+            </mat-form-field>
+
+            <div class="text-center">
+              <button class="submit-btn" type="submit" mat-raised-button color="primary">🚀 Register</button>
+            </div>
+          </form>
+        </mat-card>
+
+        <!-- 🔐 Email OTP Verification -->
+        <mat-card *ngIf="flag" class="signup-card">
+          <div class="signup-header">
+            <span>📩 Email Verification</span>
+          </div>
+
+          <form>
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>🔢 One Time Password</mat-label>
+              <input [(ngModel)]="otpData" name="otpData" type="text" matInput placeholder="Ex. 345678" required />
+              <mat-hint>Enter 6-digit OTP sent to your email.</mat-hint>
+            </mat-form-field>
+
+            <div class="text-center">
+              <button type="submit" mat-raised-button color="primary" class="submit-btn mt10" (click)="verify()">✅ Verify</button>
+            </div>
+          </form>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

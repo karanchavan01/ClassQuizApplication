@@ -1,0 +1,77 @@
+<mat-card class="mt10 mb20 color-card">
+  <mat-tab-group mat-align-tabs="center" animationDuration="500ms">
+    <!-- 🧑‍💻 USERS TAB -->
+    <mat-tab label="Users">
+      <mat-accordion *ngFor="let u of users">
+        <mat-expansion-panel class="user-panel" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <div class="user-actions">
+              <button
+                mat-mini-fab
+                color="warn"
+                aria-label="Delete"
+                (click)="delUser(u.id)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+            <mat-panel-title>
+              <div class="example-header-image"></div>
+              <div class="user-title">
+                <h2>
+                  {{ u.firstName }} {{ u.lastName }}
+                  <span class="username">({{ u.username }})</span>
+                </h2>
+              </div>
+            </mat-panel-title>
+            <mat-panel-description>
+              <span class="toggle-text">{{ panelOpenState ? 'Collapse' : 'Expand' }}</span>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <div class="user-options">
+            <button [routerLink]="'/admin/view-user/'+ u.username" color="accent" mat-flat-button>
+              View Profile
+            </button>
+            <button [routerLink]="'/admin/view-user-records/'+ u.username" color="primary" mat-flat-button class="ml10">
+              User Activities
+            </button>
+            <button mat-flat-button color="warn" class="ml10">
+              User Feedbacks
+            </button>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-tab>
+
+    <!-- 🛡️ ADMINS TAB -->
+    <mat-tab label="Admins">
+      <mat-accordion *ngFor="let u of admins">
+        <mat-expansion-panel class="user-panel" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <div class="example-header-image"></div>
+              <div class="user-title">
+                <h2>
+                  {{ u.firstName }} {{ u.lastName }}
+                  <span class="username">({{ u.username }})</span>
+                </h2>
+              </div>
+            </mat-panel-title>
+            <mat-panel-description>
+              <span class="toggle-text">{{ panelOpenState ? 'Collapse' : 'Expand' }}</span>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <div class="user-options admin-options">
+            <button [routerLink]="'/admin/view-user/'+ u.username" color="accent" mat-flat-button>
+              View Profile
+            </button>
+            <button mat-flat-button color="warn" class="ml10">
+              All Feedbacks
+            </button>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-tab>
+  </mat-tab-group>
+</mat-card>

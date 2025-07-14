@@ -1,0 +1,51 @@
+<mat-card class="color-card mt-3 p-3 shadow-lg">
+  <p class="header-p text-center">📘 Questions of Quiz: <span class="text-primary fw-bold">{{ qTitle }}</span></p>
+  <mat-divider></mat-divider>
+
+  <div class="container mt-4">
+    <div class="text-center mb-4">
+      <button [routerLink]="'/admin/add-question/' + qId + '/' + qTitle" mat-raised-button color="primary">
+        ➕ Add Question
+      </button>
+    </div>
+
+    <mat-card *ngFor="let q of questions; let i = index" class="mb-4 question-card shadow-sm">
+      <mat-card-content>
+        <p class="question-text">
+          <b>Q{{ i + 1 }}.</b>
+          <span [innerHTML]="q.content" class="ms-2">Question is not available</span>
+        </p>
+
+        <div class="row mt-3">
+          <div class="col-md-6 mb-2">
+            <p><b>a)</b> <span class="ms-2" [innerHTML]="q.option1"></span></p>
+          </div>
+          <div class="col-md-6 mb-2">
+            <p><b>b)</b> <span class="ms-2" [innerHTML]="q.option2"></span></p>
+          </div>
+          <div class="col-md-6 mb-2">
+            <p><b>c)</b> <span class="ms-2" [innerHTML]="q.option3"></span></p>
+          </div>
+          <div class="col-md-6 mb-2">
+            <p><b>d)</b> <span class="ms-2" [innerHTML]="q.option4"></span></p>
+          </div>
+        </div>
+
+        <mat-divider class="my-2"></mat-divider>
+
+        <p class="correct-answer">
+          ✅ <b>Correct Answer:</b> <span class="ms-2" [innerHTML]="q.answer"></span>
+        </p>
+      </mat-card-content>
+
+      <mat-card-actions class="d-flex justify-content-end">
+        <button mat-button color="warn" (click)="deleteQuestion(q.quesId)">
+          🗑️ Delete
+        </button>
+        <button mat-button color="accent" [routerLink]="'/admin/update-question/' + q.quesId + '/' + qId + '/' + qTitle">
+          ✏️ Modify
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</mat-card>

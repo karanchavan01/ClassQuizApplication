@@ -1,0 +1,105 @@
+/* 📦 Wrapper to center card */
+.login-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #e3f2fd, #ffffff);
+  padding: 20px;
+}
+
+/* 🧾 Login Card */
+.login-card {
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔙 Back Button */
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin-bottom: 16px;
+  font-weight: 500;
+  color: #3f51b5;
+  transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+  color: #1a237e;
+}
+
+.back-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* 🎓 Logo */
+.logo-container img {
+  border-radius: 50%;
+  border: 2px solid #3f51b5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 📝 Heading */
+h2 {
+  margin-top: 20px;
+  font-weight: 700;
+  color: #333;
+}
+
+h2 span {
+  color: #3f51b5;
+}
+
+/* 📦 Full Width Input */
+.full-width {
+  width: 100%;
+  margin-top: 16px;
+}
+
+/* 🎮 Button Group */
+.button-group {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* 🧼 Spacing Utility */
+/* Common Modern Button Styling */
+.ml10, .ml11 {
+  color: white;
+  font-weight: 600;
+  border: 1px solid #1a1a1a;
+  border-radius: 12px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #004e92, #000428);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+/* Hover Effects */
+.ml10:hover,
+.ml11:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #0066ff, #001133);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Click (active) effect */
+.ml10:active,
+.ml11:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.ml10 {
+  margin-left: 10px;
+}

@@ -1,0 +1,94 @@
+.color-card {
+  background-color: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #e0e0e0;
+}
+
+.color-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-record:hover {
+  background-color: #fafafa;
+  transform: translateY(-2px);
+}
+
+.user-history-heading {
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #333;
+}
+
+.example-header-image {
+  background-image: url('https://image.flaticon.com/icons/png/512/327/327010.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.quiz-details {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+  color: #444;
+}
+
+.quiz-details li {
+  margin-bottom: 10px;
+}
+
+.back {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.back:hover {
+  transform: scale(1.1);
+}
+
+.div {
+  cursor: pointer;
+}
+
+.no-record-msg {
+  font-size: 24px;
+  color: #555;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+button[mat-raised-button] {
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+
+button[mat-raised-button]:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+  .quiz-details li {
+    font-size: 14px;
+  }
+
+  .user-history-heading {
+    font-size: 18px;
+  }
+
+  .no-record-msg {
+    font-size: 20px;
+  }
+
+  button[mat-raised-button] {
+    font-size: 13px;
+    padding: 6px 14px;
+  }
+}

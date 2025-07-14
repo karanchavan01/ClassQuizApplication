@@ -1,0 +1,52 @@
+<div class="login-wrapper d-flex justify-content-center align-items-center">
+  <mat-card class="login-card mat-elevation-z6">
+
+    <!-- 🔙 Back Button -->
+    <div class="back-btn" routerLink="/"> 
+      <img class="back-icon" src="../../../../assets/back.png" alt="Go Back" />
+      <span>Back</span>
+    </div>
+
+    <!-- 🎓 Logo -->
+    <div class="logo-container text-center">
+      <img src="../../../assets/logo.png" alt="ClassQuiz Logo" width="100" height="100" />
+    </div>
+
+    <!-- 📝 Heading -->
+    <h2 class="text-center">🔐 Login to <span>ClassQuiz</span></h2>
+
+    <!-- 🧾 Login Form -->
+    <form (ngSubmit)="formSubmit()">
+
+      <!-- 👤 Username Field -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>👤 Username</mat-label>
+        <input
+          matInput
+          placeholder="Enter your username"
+          name="username"
+          [(ngModel)]="loginData.username"
+          required />
+      </mat-form-field>
+
+      <!-- 🔑 Password Field -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>🔑 Password</mat-label>
+        <input
+          matInput
+          type="password"
+          placeholder="Enter your password"
+          name="password"
+          [(ngModel)]="loginData.password"
+          required />
+      </mat-form-field>
+
+      <!-- 🚀 Buttons -->
+      <div class="button-group text-center">
+        <button mat-raised-button color="primary" type="submit" class="ml11">🚀Login</button>
+        <button mat-raised-button color="accent" type="reset" class="ml10">🔄Reset</button>
+      </div>
+    </form>
+
+  </mat-card>
+</div>
