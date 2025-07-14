@@ -127,7 +127,7 @@ Welcome to **ClassQuizApplication** – a modern online quiz platform built with
 ![Login Page](screenshots/user-profile.png)
 
 ### User Dashboard Page
-![Home Page](screenshots/admin-dashboard.png)
+![Home Page](screenshots/user-dashboard.png)
 
 ### User Start Quiz
 ![Register Page](screenshots/user-quiz-instructions.png)
