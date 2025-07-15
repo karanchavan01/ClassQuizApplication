@@ -40,7 +40,7 @@ Welcome to **ClassQuizApplication** – a modern online quiz platform built with
 - 📈 Performance Tracking
 - ✍️ Feedback Submission
 - 📚 History of Attempted Quizzes
-- 🧑 Responsive UI with Angular Material
+- 🧑 Responsive UI with Angular Material + Bootstrap
 
 ---
 
@@ -48,8 +48,8 @@ Welcome to **ClassQuizApplication** – a modern online quiz platform built with
 
 | Category        | Technologies                                |
 |-----------------|---------------------------------------------|
-| 🧠 Frontend     | Angular 17+, Angular Material, Bootstrap    |
-| 🔧 Backend      | Spring Boot 3.1, Java 21, REST API          |
+| 🧠 Frontend     | Angular 20, Angular Material, Bootstrap 5    |
+| 🔧 Backend      | Spring Boot, REST API, Spring MVC, Spring Data JPA, Hibernate ORM |
 | 🗃️ Database     | MySQL 8.0                                   |
 | 🔐 Security     | Spring Security, JWT Authentication         |
 | 📦 Build Tools  | Maven (backend), npm (frontend)             |
@@ -152,6 +152,7 @@ Welcome to **ClassQuizApplication** – a modern online quiz platform built with
 - Node.js v16+
 - Angular CLI
 - Java 17+
+- Spring Tool Suite
 - Maven
 - MySQL
 
