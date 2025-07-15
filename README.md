@@ -6,7 +6,7 @@
 ![Database](https://img.shields.io/badge/MySQL-8.0-blue)
 ![Status](https://img.shields.io/badge/status-Production%20Ready-brightgreen)
 
-Welcome to **ClassQuizApplication** – a modern online quiz platform built with **Angular (latest)** for frontend and **Spring Boot (JDK 21)** for backend. This project aims to deliver a clean and efficient environment for conducting quizzes between **Admin(Class Representative)** and **Students**. 🧠📘
+Welcome to **ClassQuizApplication** – a modern online quiz platform built with **Angular (latest)** for frontend and **Spring Boot (JDK 21)** for backend. This project aims to deliver a clean and efficient environment for conducting quizzes between **Admin(Teacher)** and **Students**. 🧠📘
 
 ---
 
@@ -18,7 +18,7 @@ Welcome to **ClassQuizApplication** – a modern online quiz platform built with
 
 ## 👨‍💻 Roles
 
-- 👑 **Admin**  
+- 👑 **Admin(Teacher)**  
   - Create, update and delete quizzes  
   - Manage questions and categories  
   - View student results and download reports  
@@ -70,79 +70,79 @@ Welcome to **ClassQuizApplication** – a modern online quiz platform built with
 ![Register Page](screenshots/register-page.png)
 
 ### Admin Login Page
-![Login Page](screenshots/admin-login.png)
+![Admin Login Page](screenshots/admin-login.png)
 
 ### Admin Dashboard Page
-![Home Page](screenshots/admin-dashboard.png)
+![Admin Dashboard Page](screenshots/admin-dashboard.png)
 
 ### Admin Profile Page
 ![Login Page](screenshots/admin-profile.png)
 
 ### Admin All Categories
-![Register Page](screenshots/admin-quiz-categories.png)
+![Admin All Categories](screenshots/admin-quiz-categories.png)
 
 ### Admin Modify Categories
-![Register Page](screenshots/admin-modify-category.png)
+![Admin Modify Categories](screenshots/admin-modify-category.png)
 
 ### Admin Add New Category
-![Login Page](screenshots/admin-new-category.png)
+![Admin Add New Category](screenshots/admin-new-category.png)
 
 ### Admin Add New Quiz
-![Home Page](screenshots/admin-new-quiz.png)
+![Admin Add New Quiz](screenshots/admin-new-quiz.png)
 
 ### Admin All Quizzes
-![Login Page](screenshots/admin-view-quiz.png)
+![Admin All Quizzes](screenshots/admin-view-quiz.png)
 
 ### Admin Show Quiz
-![Login Page](screenshots/admin-show-quiz.png)
+![Admin Show Quiz](screenshots/admin-show-quiz.png)
 
 ### Admin View Quiz Questions
-![Register Page](screenshots/admin-all-question.png)
+![Admin View Quiz Questions](screenshots/admin-all-question.png)
 
 ### Admin Add New Question
-![Login Page](screenshots/admin-add-question.png)
+![Admin Add New Question](screenshots/admin-add-question.png)
 
 ### Admin Modify Question
-![Login Page](screenshots/admin-modify-question.png)
+![Admin Modify Question](screenshots/admin-modify-question.png)
 
 ### Admin Delete Question
-![Login Page](screenshots/admin-delete-question.png)
+![Admin Delete Question](screenshots/admin-delete-question.png)
 
 ### Admin Update Quiz
-![Home Page](screenshots/admin-modify-quiz.png)
+![Admin Update Quiz](screenshots/admin-modify-quiz.png)
 
 ### Admin Show Attempted Quiz Records
-![Login Page](screenshots/admin-quiz-history.png)
+![Admin Show Attempted Quiz Records](screenshots/admin-quiz-history.png)
 
 ### Admin Delete Quiz
-![Login Page](screenshots/admin-delete-quiz.png)
+![Admin Delete Quiz](screenshots/admin-delete-quiz.png)
 
 ### Admin All Feedbacks
-![Register Page](screenshots/admin-feedback.png)
+![Admin All Feedbacks](screenshots/admin-feedback.png)
 
 ### User Login Page
-![Login Page](screenshots/user-login.png)
+![User Login Page](screenshots/user-login.png)
 
 ### User Profile Page
-![Login Page](screenshots/user-profile.png)
+![User Profile Page](screenshots/user-profile.png)
 
 ### User Dashboard Page
-![Home Page](screenshots/user-dashboard.png)
+![User Dashboard Page](screenshots/user-dashboard.png)
 
 ### User Start Quiz
-![Register Page](screenshots/user-quiz-instructions.png)
+![User Start Quiz](screenshots/user-quiz-instructions.png)
 
 ### User Quiz Started
-![Login Page](screenshots/user-quiz.png)
+![User Quiz Started](screenshots/user-quiz.png)
 
 ### User Submit Quiz
-![Login Page](screenshots/user-submit-quiz.png)
+![User Submit Quiz](screenshots/user-submit-quiz.png)
 
 ### User Quiz History
-![Home Page](screenshots/user-attempts.png)
+![User Quiz History](screenshots/user-attempts.png)
 
 ### User Quiz Feedback
-![Login Page](screenshots/user-feedback.png)
+![User Quiz Feedback](screenshots/user-feedback.png)
 
 ---
 
