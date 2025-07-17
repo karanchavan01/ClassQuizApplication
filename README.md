@@ -1,7 +1,7 @@
 # 🎓 ClassQuizApplication
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Frontend](https://img.shields.io/badge/Angular-17+-red)
+![Frontend](https://img.shields.io/badge/Angular-20-red)
 ![Backend](https://img.shields.io/badge/Spring%20Boot-JDK%2021-green)
 ![Database](https://img.shields.io/badge/MySQL-8.0-blue)
 ![Status](https://img.shields.io/badge/status-Production%20Ready-brightgreen)
@@ -49,7 +49,7 @@ Welcome to **ClassQuizApplication** – a modern online quiz platform built with
 | Category        | Technologies                                |
 |-----------------|---------------------------------------------|
 | 🧠 Frontend     | Angular 20, Angular Material, Bootstrap 5    |
-| 🔧 Backend      | Spring Boot, REST API, Spring MVC, Spring Data JPA, Hibernate ORM |
+| 🔧 Backend      | Spring Boot, REST API, Spring MVC, Spring Data JPA |
 | 🗃️ Database     | MySQL 8.0                                   |
 | 🔐 Security     | Spring Security, JWT Authentication         |
 | 📦 Build Tools  | Maven (backend), npm (frontend)             |
@@ -161,8 +161,12 @@ Welcome to **ClassQuizApplication** – a modern online quiz platform built with
 ## 🛠️ Project Setup
 
 This project is structured into two main modules:
+---
 📁 quizapp → Spring Boot Backend
+---
 📁 quizweb → Angular Frontend
+
+---
 
 ### 📦 Clone the Repository
 
