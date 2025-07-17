@@ -162,8 +162,11 @@ Welcome to **ClassQuizApplication** – a modern online quiz platform built with
 
 This project is structured into two main modules:
 ---
+
 📁 quizapp → Spring Boot Backend
+
 ---
+
 📁 quizweb → Angular Frontend
 
 ---
