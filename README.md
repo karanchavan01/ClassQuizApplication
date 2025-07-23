@@ -15,8 +15,11 @@ Welcome to **ClassQuizApplication** – a modern online quiz platform built with
 **ClassQuiz** is a full-stack web application that allows students to take quizzes and view their results in real-time, while admins can manage quizzes, users and performance reports.
 
 ---
+
 ## 🎥 Project Demo
+
 🔗 [Click Here To Watch Project Demo](https://drive.google.com/file/d/1eLO9-mCb58aSa9aVN7SDTsaWWsvKU3MT/view?usp=drivesdk)
+
 ---
 
 ## 👨‍💻 Roles
@@ -158,11 +161,13 @@ Welcome to **ClassQuizApplication** – a modern online quiz platform built with
 - Spring Tool Suite
 - Maven
 - MySQL
+- VS Code
 
 ---
 
 ## 🛠️ Project Setup
 This project is structured into two main modules:
+
 ---
 
 📁 quizapp → Spring Boot Backend
